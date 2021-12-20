@@ -1,0 +1,24 @@
+<p>list of heroes</p>
+
+<ul>
+    <li *ngFor="let hero of heroes; let i = index">
+        {{i + 1}} - {{hero}}
+    </li>
+</ul>
+
+
+
+<div *ngIf="DeletedHeroes.length != 0">
+    <h3>
+        Deleted hero
+    </h3>
+    <span *ngFor = "let hero of DeletedHeroes; let i = index">
+        {{i+1}} - {{hero}}
+    </span>
+
+<ng-template> Nothin has been deleted yet. </ng-template>
+
+</div>
+<button (click) = "DeleteHero()">
+    Delete hero
+</button>
